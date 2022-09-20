@@ -1,0 +1,36 @@
+
+<div class="card">
+  <h5 class="card-header">{{title}}</h5>
+  <div class="card-body">
+    <form [formGroup]="formStudent" (submit)="studentDecision()">
+      <div class="row">
+        <div class="col-md-6">
+          <input formControlName="username" type="text" class="form-control" placeholder="Nombre usuario">
+        </div>
+        <div class="col-md-6">
+          <input formControlName="firstName" type="text" class="form-control" placeholder="Primer nombre">
+        </div>
+      </div>
+      <div class="form-group"> </div>
+      <br>
+      <div class="row">
+        <div class="col-md-6">
+          <input formControlName="lastName" type="text" class="form-control" placeholder="Apellido">
+        </div>
+        <div class="col-md-6">
+          <input formControlName="age" type="number" class="form-control" placeholder="Edad">
+      </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-6">
+          <input formControlName="career" type="text" class="form-control" placeholder="Carrera">
+        </div>
+      </div>
+      <br>
+      <div class="form-group"></div>
+      <button mat-flat-button color="primary" [disabled]="formStudent.invalid">Guardar</button>
+      <a mat-stroked-button routerLink="/student">Cancelar</a>
+    </form>
+  </div>
+</div>
